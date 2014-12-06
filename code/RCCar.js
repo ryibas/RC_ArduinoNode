@@ -15,7 +15,15 @@ myBoard.on("ready", function() {
 
     stop();
 
-    setTimeout(forward(), 5000);
+    //setTimeout(forward(), 5000);
+
+    setInterval(function () {
+        setInterval(function () {
+            forward();
+        }, 5000);
+        stop();
+    }, 10000);
+
 });
 
 function forward() {
